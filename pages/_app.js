@@ -75,11 +75,11 @@ export default class MyApp extends App {
           <title>Notus NextJS by Creative Tim</title>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         </Head>
-        <Layout>
-          <AuthProvider>
+        <AuthProvider>
+          <Layout>
             <Component {...pageProps} />
-          </AuthProvider>
-        </Layout>
+          </Layout>
+        </AuthProvider>
       </React.Fragment>
     );
   }
