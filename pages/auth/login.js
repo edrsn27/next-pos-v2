@@ -5,7 +5,10 @@ import Link from "next/link";
 
 import Auth from "layouts/Auth.js";
 import { useAuth } from "context/AuthProvider";
+import { useRouter } from "next/router";
 export default function Login() {
+  const router = useRouter();
+
   const { signin } = useAuth();
 
   const [email, setEmail] = React.useState("");
@@ -19,6 +22,7 @@ export default function Login() {
     setError(null);
     try {
       await signin(email, password);
+      router.push("/admin/dashboard");
     } catch (error) {
       setError(error.message);
     }
