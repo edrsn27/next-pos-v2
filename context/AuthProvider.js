@@ -16,13 +16,9 @@ export default function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const usersCollectionRef = collection(db, "users");
-
   const signup = async (email, password, name) => {
     const user = await createUserWithEmailAndPassword(auth, email, password);
-    setDoc(doc(usersCollectionRef, user.user.uid), {
-      name: name,
-    });
+
     return user;
   };
   const signin = (email, password) => {
