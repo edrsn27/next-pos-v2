@@ -31,8 +31,15 @@ export default function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        user.getIdTokenResult().then((idTokenResult) => {
+          user.admin = idTokenResult.claims.admin;
+        });
+      }
+
       setCurrentUser(user);
       setLoading(false);
+      console.log(user);
     });
 
     return unsubscribe;

@@ -33,5 +33,5 @@ export default function Auth({ children }) {
         </main>
       </>
     );
-  else return "loading...">;
+  else return "loading...";
 }
