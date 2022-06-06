@@ -20,9 +20,9 @@ export default function Auth({ children }) {
       <>
         <Navbar transparent />
         <main>
-          <section className="relative w-full h-full py-40 min-h-screen">
+          <section className="relative w-full h-full min-h-screen py-40">
             <div
-              className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
+              className="absolute top-0 w-full h-full bg-no-repeat bg-blueGray-800 bg-full"
               style={{
                 backgroundImage: "url('/img/register_bg_2.png')",
               }}
@@ -33,5 +33,5 @@ export default function Auth({ children }) {
         </main>
       </>
     );
-  else return <PageChange path={router.pathname} />;
+  else return "loading...">;
 }

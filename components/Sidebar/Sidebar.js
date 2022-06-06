@@ -207,13 +207,13 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/posts">
+                <Link href="/admin/user-post">
                   <a
                     href="#pablo"
                     className="block py-3 text-xs font-bold uppercase text-blueGray-700 hover:text-blueGray-500"
                   >
                     <i className="mr-2 text-sm fas fa-clipboard-list text-blueGray-300"></i>{" "}
-                    Posts
+                    User posts
                   </a>
                 </Link>
               </li>
