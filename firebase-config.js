@@ -8,8 +8,6 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 import { getDatabase } from "firebase/database";
 
-import { getFunctions, httpsCallable } from "firebase/functions";
-
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -26,9 +24,3 @@ export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
 export const db = getDatabase(app);
-
-const functions = getFunctions(app);
-
-export function addAdminRole(email) {
-  return httpsCallable(functions, "addAdminRole")({ email });
-}

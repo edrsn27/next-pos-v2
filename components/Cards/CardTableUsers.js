@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // components
 
 import TableDropdown from "components/Dropdowns/TableDropdown.js";
-import { addAdminRole } from "firebase-config";
+import { addAdminRole } from "admin-functions/accounts.js";
 
 export default function CardTable({ color }) {
   const updateUserToAdmin = async () => {
